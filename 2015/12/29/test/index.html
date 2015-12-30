@@ -6,40 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>使用hexo+gihub搭建博客记录 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="下午搞了下hexo和github，搭建了个人的博客站点。博客的建立也是激励自己，在2016年里好好努力，进行更多的技术积累和个人沉淀。
-hexo确实好用，简单方便，网上的资料也很多。不过在搭建的过程中也遇到了一些问题，在此记录一下。
-环境：
-
-nodejs
-git
-hexo
-
-nodejs和git，环境中就已经装好，不需要折腾。按照hexo官网，安装了下hexo。到此一切顺利。hexo serve">
+  <meta name="description">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用hexo+gihub搭建博客记录">
-<meta property="og:url" content="http://yoursite.com/2015/12/29/hexo-github/index.html">
+<meta property="og:url" content="http://yoursite.com/2015/12/29/test/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="下午搞了下hexo和github，搭建了个人的博客站点。博客的建立也是激励自己，在2016年里好好努力，进行更多的技术积累和个人沉淀。
-hexo确实好用，简单方便，网上的资料也很多。不过在搭建的过程中也遇到了一些问题，在此记录一下。
-环境：
-
-nodejs
-git
-hexo
-
-nodejs和git，环境中就已经装好，不需要折腾。按照hexo官网，安装了下hexo。到此一切顺利。hexo serve">
-<meta property="og:updated_time" content="2015-12-29T11:06:04.000Z">
+<meta property="og:description">
+<meta property="og:updated_time" content="2015-12-29T08:25:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用hexo+gihub搭建博客记录">
-<meta name="twitter:description" content="下午搞了下hexo和github，搭建了个人的博客站点。博客的建立也是激励自己，在2016年里好好努力，进行更多的技术积累和个人沉淀。
-hexo确实好用，简单方便，网上的资料也很多。不过在搭建的过程中也遇到了一些问题，在此记录一下。
-环境：
-
-nodejs
-git
-hexo
-
-nodejs和git，环境中就已经装好，不需要折腾。按照hexo官网，安装了下hexo。到此一切顺利。hexo serve">
+<meta name="twitter:description">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -221,10 +197,10 @@ nodejs和git，环境中就已经装好，不需要折腾。按照hexo官网，�
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-hexo-github" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/12/29/hexo-github/" class="article-date">
+      <a href="/2015/12/29/test/" class="article-date">
   	<time datetime="2015-12-29T06:37:43.000Z" itemprop="datePublished">2015-12-29</time>
 </a>
     </div>
@@ -246,10 +222,6 @@ nodejs和git，环境中就已经装好，不需要折腾。按照hexo官网，�
       
       <div class="article-info article-info-post">
         
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-	</div>
-
         
 
         <div class="clearfix"></div>
@@ -258,18 +230,7 @@ nodejs和git，环境中就已经装好，不需要折腾。按照hexo官网，�
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>下午搞了下hexo和github，搭建了个人的博客站点。博客的建立也是激励自己，在2016年里好好努力，进行更多的技术积累和个人沉淀。</p>
-<p>hexo确实好用，简单方便，网上的资料也很多。不过在搭建的过程中也遇到了一些问题，在此记录一下。</p>
-<p>环境：</p>
-<ul>
-<li>nodejs</li>
-<li>git</li>
-<li>hexo</li>
-</ul>
-<p>nodejs和git，环境中就已经装好，不需要折腾。按照hexo官网，安装了下hexo。到此一切顺利。hexo server可以正常启动本地服务。现在需要将它与github进行关联，使用<a href="http://username.github.io" target="_blank" rel="external">http://username.github.io</a> 就可以访问站点。没有自己买域名，就直接使用github.io了。一切按教程，到github建仓库。然后，hexo generator,hexo deploy。发现可以generator成功，deploy没有反应。网上找了issue，原来是自己没有装git插件。npm install hexo-deployer-git –save就可以deploy了。注意：需要增加–save，否则还是无法deploy。打开站点<a href="http://violarong.github.io/，可以正常访问到了。" target="_blank" rel="external">http://violarong.github.io/，可以正常访问到了。</a><br>_config.yml配置：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:<span class="comment">//github.com/violarong/violarong.github.io.git</span></span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>参考资料：<br><a href="http://wsgzao.github.io/post/hexo-guide/" target="_blank" rel="external">http://wsgzao.github.io/post/hexo-guide/</a><br><a href="https://github.com/hexojs/hexo/issues/1154" target="_blank" rel="external">https://github.com/hexojs/hexo/issues/1154</a></p>
-
+        
       
     </div>
     
@@ -278,18 +239,9 @@ nodejs和git，环境中就已经装好，不需要折腾。按照hexo官网，�
     
 <nav id="article-nav">
   
-    <a href="/2015/12/29/test/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          使用hexo+gihub搭建博客记录
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/12/29/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2015/12/29/hexo-github/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用hexo+gihub搭建博客记录</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -324,7 +276,7 @@ nodejs和git，环境中就已经装好，不需要折腾。按照hexo官网，�
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="hexo-github" data-title="使用hexo+gihub搭建博客记录" data-url="http://yoursite.com/2015/12/29/hexo-github/"></div>
+	<div class="ds-thread" data-thread-key="test" data-title="使用hexo+gihub搭建博客记录" data-url="http://yoursite.com/2015/12/29/test/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

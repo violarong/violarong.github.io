@@ -198,6 +198,58 @@
 
       <div class="body-wrap">
   
+    <article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/29/test/" class="article-date">
+  	<time datetime="2015-12-29T06:37:43.000Z" itemprop="datePublished">2015-12-29</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/29/test/">使用hexo+gihub搭建博客记录</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-hexo-github" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -224,7 +276,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天心血来潮，想使用hexo和github搭建一个自己的模块。让自己在2016年里不要偷懒，慢慢的进行技术积累，慢慢的提升自己的表达能力。</p>
+        <p>下午搞了下hexo和github，搭建了个人的博客站点。博客的建立也是激励自己，在2016年里好好努力，进行更多的技术积累和个人沉淀。</p>
+<p>hexo确实好用，简单方便，网上的资料也很多。不过在搭建的过程中也遇到了一些问题，在此记录一下。</p>
+<p>环境：</p>
+<ul>
+<li>nodejs</li>
+<li>git</li>
+<li>hexo</li>
+</ul>
+<p>nodejs和git，环境中就已经装好，不需要折腾。按照hexo官网，安装了下hexo。到此一切顺利。hexo server可以正常启动本地服务。现在需要将它与github进行关联，使用<a href="http://username.github.io" target="_blank" rel="external">http://username.github.io</a> 就可以访问站点。没有自己买域名，就直接使用github.io了。一切按教程，到github建仓库。然后，hexo generator,hexo deploy。发现可以generator成功，deploy没有反应。网上找了issue，原来是自己没有装git插件。npm install hexo-deployer-git –save就可以deploy了。注意：需要增加–save，否则还是无法deploy。打开站点<a href="http://violarong.github.io/，可以正常访问到了。" target="_blank" rel="external">http://violarong.github.io/，可以正常访问到了。</a><br>_config.yml配置：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:<span class="comment">//github.com/violarong/violarong.github.io.git</span></span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>参考资料：<br><a href="http://wsgzao.github.io/post/hexo-guide/" target="_blank" rel="external">http://wsgzao.github.io/post/hexo-guide/</a><br><a href="https://github.com/hexojs/hexo/issues/1154" target="_blank" rel="external">https://github.com/hexojs/hexo/issues/1154</a></p>
 
       
     </div>
