@@ -4,19 +4,19 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Hexo</title>
+  <title>violarong的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="violarong的博客">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="violarong的博客">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="violarong的博客">
 <meta name="twitter:description">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="violarong的博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -72,12 +72,12 @@
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
 						<li>菜单</li>
-						<li>標籤</li>
+						<li>标签</li>
 						
 						<li>友情链接</li>
 						
 						
-						<li>關於</li>
+						<li>关于我</li>
 						
 					</ul>
 				</div>
@@ -226,15 +226,22 @@
       
         <p>下午搞了下hexo和github，搭建了个人的博客站点。博客的建立也是激励自己，在2016年里好好努力，进行更多的技术积累和个人沉淀。</p>
 <p>hexo确实好用，简单方便，网上的资料也很多。不过在搭建的过程中也遇到了一些问题，在此记录一下。</p>
+<blockquote>
+<p>后记：在2015-12-29日搭建了这个博客。今天是2016-5-26日。2016年已快过了一半了，原来在2015年末想要做的事情貌似都没有做。我仍然是处于定计划却不实施的阶段哈。今天想使用github做在线demo，想起来这个博客，可是却不知道如何使用了。所以把这篇文章完善下吧。</p>
+</blockquote>
 <p>环境：</p>
 <ul>
 <li>nodejs</li>
 <li>git</li>
 <li>hexo</li>
 </ul>
-<p>nodejs和git，环境中就已经装好，不需要折腾。按照hexo官网，安装了下hexo。到此一切顺利。hexo server可以正常启动本地服务。现在需要将它与github进行关联，使用<a href="http://username.github.io" target="_blank" rel="external">http://username.github.io</a> 就可以访问站点。没有自己买域名，就直接使用github.io了。一切按教程，到github建仓库。然后，hexo generator,hexo deploy。发现可以generator成功，deploy没有反应。网上找了issue，原来是自己没有装git插件。npm install hexo-deployer-git –save就可以deploy了。注意：需要增加–save，否则还是无法deploy。打开站点<a href="http://violarong.github.io/，可以正常访问到了。" target="_blank" rel="external">http://violarong.github.io/，可以正常访问到了。</a><br>_config.yml配置：</p>
+<p>首先需要安装nodejs和git。由于nodejs和git已经装好，不需要折腾。按照<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">hexo官网</a>，安装了下hexo。到此一切顺利。hexo server可以正常启动本地服务。官网中的命令：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ hexo init blog</span><br><span class="line">$ cd blog</span><br><span class="line">$ npm install</span><br><span class="line">$ hexo server <span class="comment">//本地启动服务，查看</span></span><br></pre></td></tr></table></figure></p>
+<p>hexo就绪，现在需要将它与github进行关联，并使用<a href="http://username.github.io" target="_blank" rel="external">http://username.github.io</a> 来访问站点。没有买域名，就直接使用github.io了。首先到github建仓库。填写项目信息：project name:violarong.github.io。注：Github Pages的Repository名字是特定的，比如我Github账号是violarong，那么我Github Pages Repository名字就是violarong.github.io。然后配置_config.yml文件：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:<span class="comment">//github.com/violarong/violarong.github.io.git</span></span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p>参考资料：<br><a href="http://wsgzao.github.io/post/hexo-guide/" target="_blank" rel="external">http://wsgzao.github.io/post/hexo-guide/</a><br><a href="https://github.com/hexojs/hexo/issues/1154" target="_blank" rel="external">https://github.com/hexojs/hexo/issues/1154</a></p>
+<p>然后执行命令：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generator</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>这样就可以使用<a href="http://violarong.github.io/" target="_blank" rel="external">http://violarong.github.io/</a> 访问了。但这这个过程中，发现可以generator成功，deploy没有反应。网上找了<a href="https://github.com/hexojs/hexo/issues/1154" target="_blank" rel="external">issue</a>，原来是自己没有装git插件。npm install hexo-deployer-git –save就可以deploy了。注意：需要增加–save，否则还是无法deploy。打开站点<a href="http://violarong.github.io/" target="_blank" rel="external">http://violarong.github.io/</a> ，可以正常访问到了。</p>
+<p>hexo常用命令：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br><span class="line">hexo n #生成文章，或者source\_posts手动编辑</span><br><span class="line">hexo s #本地发布预览效果</span><br><span class="line">hexo g #生成public静态文件</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -265,74 +272,13 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/12/29/hello-world/" class="article-date">
-  	<time datetime="2015-12-29T06:28:41.000Z" itemprop="datePublished">2015-12-29</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/29/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
 </div>
       <footer id="footer">
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2015 violarong
+    		&copy; 2016 violarong
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
